@@ -17,7 +17,8 @@ tools.
 
 ## Requirements
 
-- [Go 1.24](https://go.dev/dl/)
+- [Node.js LTS](https://nodejs.org/) (when using `npx`)
+- [Go 1.24](https://go.dev/dl/) (when building from source)
 
 ## Installation
 
@@ -27,10 +28,11 @@ Configuration for common MCP hosts (Claude Desktop, Cursor):
 {
   "mcpServers": {
     "developer-overheid-api-register": {
-      "command": "go",
+      "command": "npx",
       "args": [
-        "run",
-        "github.com/dstotijn/mcp-developer-overheid-api-register@main"
+        "-y",
+        "binrun",
+        "github.com/dstotijn/mcp-developer-overheid-api-register@latest"
       ]
     }
   }
